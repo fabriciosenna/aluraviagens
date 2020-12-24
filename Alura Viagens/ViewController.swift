@@ -9,23 +9,28 @@
 import UIKit
 
 class ViewController: UIViewController,UITableViewDataSource {
+    @IBOutlet weak var viewHoteis: UIView!
+    @IBOutlet weak var viewPacotes: UIView!
     
     @IBOutlet weak var tabelaViagens: UITableView!
-    let listaViagem: [String] = ["Rio de Janeiro", "Uberlândia", "São Paulo", "Florianópolis"]
+    let listaViagens: Array<Viagem> = ViagemDAO().retornaTodasAsViagens()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tabelaViagens.dataSource = self
+        self.viewPacotes.layer.cornerRadius = 10
+        self.viewHoteis.layer.cornerRadius = 10
         // Do any additional setup after loading the view, typically from a nib.
     }
    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return listaViagem.count
+        return listaViagens.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = listaViagem[indexPath.row]
+        let viagemAtual = listaViagens[indexPath.row]
+        cell.textLabel?.text = viagemAtual.titulo
         
         return cell
     }
