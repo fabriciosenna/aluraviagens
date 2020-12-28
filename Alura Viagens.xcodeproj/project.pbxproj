@@ -14,7 +14,7 @@
 		DF0C40422593DD2F0009AC3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF0C40402593DD2F0009AC3D /* LaunchScreen.storyboard */; };
 		DF0C404A259556F20009AC3D /* Viagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0C4049259556F20009AC3D /* Viagem.swift */; };
 		DF0C404E25955CD60009AC3D /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0C404D25955CD60009AC3D /* TableViewCell.swift */; };
-		DF0C4066259A15BA0009AC3D /* ViagemDAO.swift 10-30-25-145.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0C4065259A15BA0009AC3D /* ViagemDAO.swift 10-30-25-145.swift */; };
+		DF0C406D259A47080009AC3D /* ViagemDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0C406C259A47080009AC3D /* ViagemDAO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +27,7 @@
 		DF0C40432593DD2F0009AC3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF0C4049259556F20009AC3D /* Viagem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viagem.swift; sourceTree = "<group>"; };
 		DF0C404D25955CD60009AC3D /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		DF0C4065259A15BA0009AC3D /* ViagemDAO.swift 10-30-25-145.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ViagemDAO.swift 10-30-25-145.swift"; path = "../../../../../../.Trash/ViagemDAO.swift 10-30-25-145.swift"; sourceTree = "<group>"; };
+		DF0C406C259A47080009AC3D /* ViagemDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViagemDAO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +60,7 @@
 		DF0C40362593DD2E0009AC3D /* Alura Viagens */ = {
 			isa = PBXGroup;
 			children = (
-				DF0C4062259A14C60009AC3D /* ViaggemDAO */,
+				DF0C406B259A46E90009AC3D /* ViagemDAO */,
 				DF0C405E259A145E0009AC3D /* Model */,
 				DF0C405F259A14770009AC3D /* Home */,
 				DF0C40372593DD2E0009AC3D /* AppDelegate.swift */,
@@ -75,7 +75,6 @@
 		DF0C405E259A145E0009AC3D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DF0C4065259A15BA0009AC3D /* ViagemDAO.swift 10-30-25-145.swift */,
 				DF0C4049259556F20009AC3D /* Viagem.swift */,
 			);
 			path = Model;
@@ -106,11 +105,12 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		DF0C4062259A14C60009AC3D /* ViaggemDAO */ = {
+		DF0C406B259A46E90009AC3D /* ViagemDAO */ = {
 			isa = PBXGroup;
 			children = (
+				DF0C406C259A47080009AC3D /* ViagemDAO.swift */,
 			);
-			path = ViaggemDAO;
+			path = ViagemDAO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,8 +184,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF0C4066259A15BA0009AC3D /* ViagemDAO.swift 10-30-25-145.swift in Sources */,
 				DF0C404E25955CD60009AC3D /* TableViewCell.swift in Sources */,
+				DF0C406D259A47080009AC3D /* ViagemDAO.swift in Sources */,
 				DF0C403A2593DD2E0009AC3D /* ViewController.swift in Sources */,
 				DF0C404A259556F20009AC3D /* Viagem.swift in Sources */,
 				DF0C40382593DD2E0009AC3D /* AppDelegate.swift in Sources */,
