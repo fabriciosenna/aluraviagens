@@ -213,11 +213,11 @@
             </objects>
             <point key="canvasLocation" x="63.75" y="32.74647887323944"/>
         </scene>
-        <!--View Controller-->
+        <!--Pacotes Viagens View Controller-->
         <scene sceneID="8Cb-on-GCw">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iaR-mr-fzy" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="MhX-EA-Zfn" sceneMemberID="viewController">
+                <viewController id="MhX-EA-Zfn" customClass="PacotesViagensViewController" customModule="Alura_Viagens" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5uJ-z9-EUh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -256,7 +256,7 @@
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" id="Df9-iV-vqc">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="celulaPacote" id="Df9-iV-vqc" customClass="PacoteViagemCollectionViewCell" customModule="Alura_Viagens" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -278,6 +278,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cjJ-Mj-lVJ"/>
                     </view>
+                    <connections>
+                        <outlet property="colecaoPacotesViagem" destination="vo1-fl-7Vk" id="fXN-VZ-X82"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="941.25" y="32.74647887323944"/>
