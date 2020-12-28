@@ -46,8 +46,13 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         return cell
     }
     
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 175
+//    }
+    
+    //verifica qual tamanho de device se esta usando e altera a altura da célula
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 175
+        return UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad ? 260 : 175
     }
 
 }
