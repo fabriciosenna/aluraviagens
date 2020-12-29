@@ -8,19 +8,34 @@
 
 import UIKit
 
-class PacotesViagensViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
+class PacotesViagensViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout,UISearchBarDelegate {
+
+    // MARK: Outlets
 
     @IBOutlet weak var colecaoPacotesViagem: UICollectionView!
-    let listaViagens: Array<Viagem> = ViagemDAO().retornaTodasAsViagens()
+    @IBOutlet weak var pesquisarViagens: UISearchBar!
+    @IBOutlet weak var labelContadorPacotes: UILabel!
+    
+    // MARK: Constantes e Variáveis
+    
+    let listaComTodasViagens: Array<Viagem> = ViagemDAO().retornaTodasAsViagens()
+    var listaViagens:Array<Viagem> = []
+    
+    
+    // MARK: Carregamento de página
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        listaViagens = listaComTodasViagens
         colecaoPacotesViagem.dataSource = self
         colecaoPacotesViagem.delegate = self
-        // Do any additional setup after loading the view.
+        pesquisarViagens.delegate = self
+        self.labelContadorPacotes.text = self.atualizaContadorLabel()
+
     }
     
+    // MARK: Funções
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return listaViagens.count
@@ -51,4 +66,19 @@ class PacotesViagensViewController: UIViewController, UICollectionViewDataSource
         return CGSize(width: larguraCelula-15, height: 160)
     }
 
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        listaViagens = listaComTodasViagens
+        
+        if searchText != ""{
+            let filtroListaViagem = NSPredicate(format: "titulo contains[cd] %@", searchText)
+           let listaFiltrada:Array<Viagem> = (listaViagens as NSArray).filtered(using: filtroListaViagem) as! Array
+            listaViagens = listaFiltrada
+        }
+        self.labelContadorPacotes.text = self.atualizaContadorLabel()
+        colecaoPacotesViagem.reloadData()
+    }
+    
+    func atualizaContadorLabel() -> String {
+        return listaViagens.count == 1 ? "1 pacote encontrado" : "\(listaViagens.count) pacotes encontrados"
+    }
 }

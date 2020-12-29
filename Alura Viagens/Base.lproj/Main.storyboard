@@ -252,17 +252,12 @@
                                         <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M32-ph-e2w">
-                                        <rect key="frame" x="0.0" y="33" width="290" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="ARa-Z2-eZa"/>
-                                        </constraints>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="O4S-Gh-sUX">
+                                        <rect key="frame" x="0.0" y="33" width="290" height="56"/>
                                         <textInputTraits key="textInputTraits"/>
-                                    </textField>
+                                    </searchBar>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6 pacotes encontrados" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZh-Yk-Gqv">
-                                        <rect key="frame" x="0.0" y="66" width="290" height="30"/>
+                                        <rect key="frame" x="0.0" y="92" width="290" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="Rcy-mP-su9"/>
                                         </constraints>
@@ -271,7 +266,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vo1-fl-7Vk">
-                                        <rect key="frame" x="0.0" y="99" width="290" height="400"/>
+                                        <rect key="frame" x="0.0" y="125" width="290" height="374"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BQX-cp-8Fr">
                                             <size key="itemSize" width="135" height="160"/>
@@ -357,6 +352,8 @@
                     <tabBarItem key="tabBarItem" title="Pacotes" id="cTA-7Q-lbV"/>
                     <connections>
                         <outlet property="colecaoPacotesViagem" destination="vo1-fl-7Vk" id="fXN-VZ-X82"/>
+                        <outlet property="labelContadorPacotes" destination="aZh-Yk-Gqv" id="Ah2-AZ-zg4"/>
+                        <outlet property="pesquisarViagens" destination="O4S-Gh-sUX" id="VoY-Ur-rzd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iaR-mr-fzy" userLabel="First Responder" sceneMemberID="firstResponder"/>
