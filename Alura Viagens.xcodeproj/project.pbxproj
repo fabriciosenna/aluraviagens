@@ -64,11 +64,11 @@
 		DF0C40362593DD2E0009AC3D /* Alura Viagens */ = {
 			isa = PBXGroup;
 			children = (
+				DF0C40372593DD2E0009AC3D /* AppDelegate.swift */,
 				DF0C406B259A46E90009AC3D /* ViagemDAO */,
 				DF0C405E259A145E0009AC3D /* Model */,
 				DF0C405F259A14770009AC3D /* Home */,
 				DF0C406E259A6FF40009AC3D /* Pacotes */,
-				DF0C40372593DD2E0009AC3D /* AppDelegate.swift */,
 				DF0C403B2593DD2E0009AC3D /* Main.storyboard */,
 				DF0C403E2593DD2F0009AC3D /* Assets.xcassets */,
 				DF0C40402593DD2F0009AC3D /* LaunchScreen.storyboard */,
@@ -88,8 +88,8 @@
 		DF0C405F259A14770009AC3D /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				DF0C4061259A14B70009AC3D /* View */,
 				DF0C4060259A14A80009AC3D /* Controller */,
+				DF0C4061259A14B70009AC3D /* View */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -121,8 +121,8 @@
 		DF0C406E259A6FF40009AC3D /* Pacotes */ = {
 			isa = PBXGroup;
 			children = (
-				DF0C4070259A70590009AC3D /* View */,
 				DF0C406F259A704E0009AC3D /* Controller */,
+				DF0C4070259A70590009AC3D /* View */,
 			);
 			path = Pacotes;
 			sourceTree = "<group>";
