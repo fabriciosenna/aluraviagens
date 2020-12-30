@@ -9,7 +9,7 @@
 import UIKit
 
 
-class PacotesViagensViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout,UISearchBarDelegate {
+class PacotesViagensViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout,UISearchBarDelegate,UICollectionViewDelegate {
 
     // MARK: Outlets
 
@@ -35,7 +35,7 @@ class PacotesViagensViewController: UIViewController, UICollectionViewDataSource
 
     }
     
-    // MARK: Funções
+    // MARK: CollectionView
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return listaViagens.count
@@ -59,13 +59,21 @@ class PacotesViagensViewController: UIViewController, UICollectionViewDataSource
         return celulaPacote
     }
     
-
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let larguraCelula = collectionView.bounds.width / 2
         
         return CGSize(width: larguraCelula-15, height: 160)
     }
-
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "detalhes") as! DetalhesViagensViewController
+        self.present(controller,animated: true,completion: nil)
+    }
+    
+    
+    // MARK: SearchBar
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         listaViagens = listaComTodasViagens
         
@@ -77,6 +85,8 @@ class PacotesViagensViewController: UIViewController, UICollectionViewDataSource
         self.labelContadorPacotes.text = self.atualizaContadorLabel()
         colecaoPacotesViagem.reloadData()
     }
+    
+    
     
     func atualizaContadorLabel() -> String {
         return listaViagens.count == 1 ? "1 pacote encontrado" : "\(listaViagens.count) pacotes encontrados"
