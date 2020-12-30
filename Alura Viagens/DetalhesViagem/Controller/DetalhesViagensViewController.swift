@@ -19,6 +19,7 @@ class DetalhesViagensViewController: UIViewController {
     @IBOutlet weak var labelPrecoPacoteViagem: UILabel!
     @IBOutlet weak var scrollPrincipal: UIScrollView!
     
+    @IBOutlet weak var textFieldData: UITextField!
     // MARK: Constantes e Variáveis
     
     var pacoteSelecionado:PacoteViagem? = nil
@@ -37,6 +38,12 @@ class DetalhesViagensViewController: UIViewController {
         self.labelPrecoPacoteViagem.text = pacote.viagem.preco
     }
     
+    @objc func exibeDataTextField(sender: UIDatePicker){
+        let formatador = DateFormatter()
+        formatador.dateFormat = "dd MM yyyy"
+        self.textFieldData.text = formatador.string(from: sender.date)
+    }
+    
     @objc func aumentarScroll(notification:Notification){
         self.scrollPrincipal.contentSize = CGSize(width: self.scrollPrincipal.frame.width, height: self.scrollPrincipal.frame.height + 320)
     }
@@ -45,4 +52,10 @@ class DetalhesViagensViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func textFieldEntrouFoco(_ sender: UITextField) {
+        let datePickerView = UIDatePicker()
+        datePickerView.datePickerMode = .date
+        sender.inputView = datePickerView
+        datePickerView.addTarget(self, action: #selector(exibeDataTextField(sender:)), for: .valueChanged)
+    }
 }
