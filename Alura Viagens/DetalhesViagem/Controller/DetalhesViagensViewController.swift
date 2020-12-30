@@ -17,6 +17,7 @@ class DetalhesViagensViewController: UIViewController {
     @IBOutlet weak var labelDescricaoPacoteViagem: UILabel!
     @IBOutlet weak var labelDataViagem: UILabel!
     @IBOutlet weak var labelPrecoPacoteViagem: UILabel!
+    @IBOutlet weak var scrollPrincipal: UIScrollView!
     
     // MARK: Constantes e Variáveis
     
@@ -24,6 +25,8 @@ class DetalhesViagensViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+        NotificationCenter.default.addObserver(self, selector: #selector(aumentarScroll(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         
         guard let pacote = pacoteSelecionado else {return print("Erro ao buscar informações sobre o pacoteViagens(classe: DetalhesViagensViewController)")}
         
@@ -32,6 +35,10 @@ class DetalhesViagensViewController: UIViewController {
         self.labelDescricaoPacoteViagem.text = pacote.descricao
         self.labelDataViagem.text = pacote.dataViagem
         self.labelPrecoPacoteViagem.text = pacote.viagem.preco
+    }
+    
+    @objc func aumentarScroll(notification:Notification){
+        self.scrollPrincipal.contentSize = CGSize(width: self.scrollPrincipal.frame.width, height: self.scrollPrincipal.frame.height + 320)
     }
     
     @IBAction func botaoVoltar(_ sender: UIButton) {
