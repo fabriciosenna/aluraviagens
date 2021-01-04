@@ -51,7 +51,9 @@ class DetalhesViagensViewController: UIViewController {
     // MARK: IBAction
     
     @IBAction func botaoVoltar(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        if let navigation = self.navigationController{
+            navigation.popToRootViewController(animated: true)
+        }
     }
     
     @IBAction func textFieldEntrouFoco(_ sender: UITextField) {
