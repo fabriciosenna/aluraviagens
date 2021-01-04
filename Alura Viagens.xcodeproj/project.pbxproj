@@ -17,6 +17,7 @@
 		DF0C406D259A47080009AC3D /* ViagemDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0C406C259A47080009AC3D /* ViagemDAO.swift */; };
 		DF0C4072259A712C0009AC3D /* PacotesViagensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0C4071259A712B0009AC3D /* PacotesViagensViewController.swift */; };
 		DF0C4074259A75480009AC3D /* PacoteViagemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0C4073259A75480009AC3D /* PacoteViagemCollectionViewCell.swift */; };
+		DF0D839225A34487002A693C /* ConfirmacaoPagamentoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0D839125A34487002A693C /* ConfirmacaoPagamentoViewController.swift */; };
 		DFD6D3B9259C917100CEC6ED /* DetalhesViagensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD6D3B8259C917100CEC6ED /* DetalhesViagensViewController.swift */; };
 		DFD6D3BB259C9FF000CEC6ED /* PacoteViagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD6D3BA259C9FF000CEC6ED /* PacoteViagem.swift */; };
 		DFD6D3BD259CA1AE00CEC6ED /* PacoteViagemDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD6D3BC259CA1AE00CEC6ED /* PacoteViagemDAO.swift */; };
@@ -52,6 +53,7 @@
 		DF0C406C259A47080009AC3D /* ViagemDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViagemDAO.swift; sourceTree = "<group>"; };
 		DF0C4071259A712B0009AC3D /* PacotesViagensViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacotesViagensViewController.swift; sourceTree = "<group>"; };
 		DF0C4073259A75480009AC3D /* PacoteViagemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacoteViagemCollectionViewCell.swift; sourceTree = "<group>"; };
+		DF0D839125A34487002A693C /* ConfirmacaoPagamentoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmacaoPagamentoViewController.swift; sourceTree = "<group>"; };
 		DFD6D3B8259C917100CEC6ED /* DetalhesViagensViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesViagensViewController.swift; sourceTree = "<group>"; };
 		DFD6D3BA259C9FF000CEC6ED /* PacoteViagem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacoteViagem.swift; sourceTree = "<group>"; };
 		DFD6D3BC259CA1AE00CEC6ED /* PacoteViagemDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PacoteViagemDAO.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				DF0C405F259A14770009AC3D /* Home */,
 				DF0C406E259A6FF40009AC3D /* Pacotes */,
 				DFD6D3B5259C90ED00CEC6ED /* DetalhesViagem */,
+				DF0D838F25A34421002A693C /* ConfirmacaoPagamento */,
 				DF0C406B259A46E90009AC3D /* ViagemDAO */,
 				DF0C403B2593DD2E0009AC3D /* Main.storyboard */,
 				DFD6D3BE259CA1FE00CEC6ED /* Assets */,
@@ -185,6 +188,22 @@
 				DF0C4073259A75480009AC3D /* PacoteViagemCollectionViewCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		DF0D838F25A34421002A693C /* ConfirmacaoPagamento */ = {
+			isa = PBXGroup;
+			children = (
+				DF0D839025A34445002A693C /* Controller */,
+			);
+			path = ConfirmacaoPagamento;
+			sourceTree = "<group>";
+		};
+		DF0D839025A34445002A693C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DF0D839125A34487002A693C /* ConfirmacaoPagamentoViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		DFD6D3B5259C90ED00CEC6ED /* DetalhesViagem */ = {
@@ -330,6 +349,7 @@
 				DFD6D3B9259C917100CEC6ED /* DetalhesViagensViewController.swift in Sources */,
 				DFD6D3BD259CA1AE00CEC6ED /* PacoteViagemDAO.swift in Sources */,
 				DF0C4072259A712C0009AC3D /* PacotesViagensViewController.swift in Sources */,
+				DF0D839225A34487002A693C /* ConfirmacaoPagamentoViewController.swift in Sources */,
 				DF0C4074259A75480009AC3D /* PacoteViagemCollectionViewCell.swift in Sources */,
 				DF0C40382593DD2E0009AC3D /* AppDelegate.swift in Sources */,
 				DFD6D3BB259C9FF000CEC6ED /* PacoteViagem.swift in Sources */,

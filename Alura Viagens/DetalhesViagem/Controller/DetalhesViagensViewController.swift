@@ -48,6 +48,8 @@ class DetalhesViagensViewController: UIViewController {
         self.scrollPrincipal.contentSize = CGSize(width: self.scrollPrincipal.frame.width, height: self.scrollPrincipal.frame.height + 320)
     }
     
+    // MARK: IBAction
+    
     @IBAction func botaoVoltar(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -57,5 +59,12 @@ class DetalhesViagensViewController: UIViewController {
         datePickerView.datePickerMode = .date
         sender.inputView = datePickerView
         datePickerView.addTarget(self, action: #selector(exibeDataTextField(sender:)), for: .valueChanged)
+    }
+    
+    @IBAction func botaoFinalizarCompra(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "confirmacaoPagamento") as! ConfirmacaoPagamentoViewController
+        controller.pacoteComprado = pacoteSelecionado
+        self.present(controller,animated: true,completion: nil)
     }
 }
